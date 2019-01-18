@@ -1,0 +1,28 @@
+.example-container
+{
+    height: 400px;
+    overflow: auto;
+}
+
+table
+{
+    width: 100%;
+}
+
+/* .alignment
+{
+    padding-top: 25px;
+    display: inline-block;
+} */
+
+.footer 
+{
+    position: fixed;
+    left: 0;
+    bottom: 195px;
+    width: 98.2%;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: cyan;
+    text-align: center;
+}
