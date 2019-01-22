@@ -1,0 +1,58 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<div>
+  <!-- <mat-toolbar class="example-toolbar" style="background-image: linear-gradient(to right, darkcyan, rgb(0,92,92));padding: 2%;">
+    <label style="color: white; font-size: large">{{pageTitle}}</label>
+      <mat-tab-group style="padding-left: 14%;position: relative;">
+         <mat-tab>
+            <ng-template mat-tab-label >
+               <a id="about" class="nav-link" [routerLink] = "['/main-about']" 
+               style="text-decoration: none; color: white; font-size: large;">
+                  About
+               </a>
+               <a id="guide" class="nav-link" [routerLink] = "['/welcome']" 
+               style="text-decoration: none; color: white; font-size: large;">
+                  Guide
+               </a>
+            </ng-template>
+         </mat-tab> 
+         <mat-tab>
+            <ng-template mat-tab-label>
+               <a class="nav-link" [routerLink] = "['/admin-login']" style="text-decoration: none;color: white; font-size: large">
+                  Admin SignIn
+               </a>
+               <a class="nav-link" [routerLink] = "['/register']" style="text-decoration: none;color: white; font-size: large">
+                  Register Room
+               </a>
+            </ng-template>
+         </mat-tab>
+         <mat-tab>
+            <ng-template mat-tab-label>
+               <a class="nav-link" [routerLink] = "['/user-login']" style="text-decoration: none; color: white; font-size: large">
+                  User SignIn
+               </a>
+               <a class="nav-link" [routerLink] = "['/userdetails']" style="text-decoration: none; color: white; font-size: large">
+                  View Details
+               </a>
+            </ng-template>
+         </mat-tab>
+      </mat-tab-group>
+
+      <label class="adminname" style="color: rgb(182, 152,152); font-size: small"> {{adminName}} </label>
+      <button class="menuicon" mat-icon-button [matMenuTriggerFor] = "menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu = "matMenu">
+        <button mat-menu-item [routerLink] = "['/user-register']">
+          <mat-icon>person_add</mat-icon>
+          <span style="font: bold; font-size: large">New User</span>
+        </button>
+      </mat-menu>   
+   </mat-toolbar> -->
+
+   <router-outlet></router-outlet>
+
+</div>
+

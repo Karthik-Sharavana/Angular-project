@@ -17,13 +17,13 @@ mat-tab
 
   .adminname
   {
-    right: 45px;
     position: absolute;
-    top: 22px;
+    right: 45px;
   }
 
   .menuicon
   {
     right: 15px;
     position: absolute;
+    color: rgb(189,189,189);
   }

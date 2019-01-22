@@ -17,12 +17,48 @@ table
 
 .footer 
 {
-    position: fixed;
-    left: 0;
-    bottom: 195px;
-    width: 98.2%;
-    padding-left: 8px;
-    padding-right: 8px;
-    color: cyan;
+    position: relative;
+    width: 100%;
     text-align: center;
 }
+
+th{
+    font-size: 14pt;
+    background-color: darkcyan;
+    color: white;
+}
+
+td{
+    font-size: 12pt;
+    color: darkcyan;
+}
+
+.positionforlabel
+{
+    float: right;
+    padding-left: 40%;
+}
+
+mat-tab
+{
+    padding-left: 10px;
+}
+
+.fill-space {
+    /* This fills the remaining space, by using flexbox.
+    Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .adminname
+  {
+    position: absolute;
+    right: 45px;
+  }
+
+  .menuicon
+  {
+    right: 15px;
+    position: absolute;
+    color: rgb(189,189,189);
+  }

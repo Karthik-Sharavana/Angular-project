@@ -8,6 +8,8 @@ import { FormGroup, FormBuilder, Validators,FormControlName, FormControl } from 
 })
 export class RegisterRoomComponent implements OnInit {
 
+  pageTitle = "Meeting Application"
+
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
@@ -20,11 +22,11 @@ export class RegisterRoomComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.firstFormGroup = new FormGroup
+      this.firstFormGroup = this._formBuilder.group
       ({
-        rid: new FormControl('', [Validators.required]),
-        rnumber: new FormControl('', [Validators.required]),
-        rname: new FormControl('', [Validators.required]),
+        rid: ['', Validators.required],
+        rnumber: ['', Validators.required],
+        rname: ['', Validators.required]
       });
       this.secondFormGroup = this._formBuilder.group
       ({
@@ -34,8 +36,8 @@ export class RegisterRoomComponent implements OnInit {
         area: ['',Validators.required],
         lmark: ['',Validators.required],
         pincode: ['',Validators.required],
-        city: ['',Validators.required],
-        state: ['',Validators.required],
+        selectedValue: ['',Validators.required],
+        selectedCar: ['',Validators.required],
       });
       this.thirdFormGroup = this._formBuilder.group
       ({
@@ -48,4 +50,31 @@ export class RegisterRoomComponent implements OnInit {
       });
   }
 
+  // selectedValue: string;
+  // selectedCar: string;
+
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
+
+  cars: Car[] = [
+    {value: 'volvo', viewValue: 'Volvo'},
+    {value: 'saab', viewValue: 'Saab'},
+    {value: 'mercedes', viewValue: 'Mercedes'}
+  ];
+
+}
+
+export interface Food
+{
+  value: string;
+  viewValue: string;
+}
+
+export interface Car
+{
+  value: string;
+  viewValue: string;
 }
