@@ -1,5 +1,5 @@
 <div>
-  <mat-toolbar class="example-toolbar" style="background-color: darkcyan;">
+  <mat-toolbar class="example-toolbar" style="background-image: linear-gradient(to right, darkcyan, rgb(0,92,92));padding: 2%;">
     <label style="color: white; font-size: large">{{pageTitle}}</label>
       <mat-tab-group style="padding-left: 14%;position: relative;">
          <mat-tab>
@@ -25,9 +25,9 @@
          </mat-tab>
       </mat-tab-group>
 
-      <label class="adminname" style="color: white; font-size: large"> {{adminName}} </label>
+      <label class="adminname" style="color: rgb(182, 152,152); font-size: small"> {{adminName}} </label>
       <button class="menuicon" mat-icon-button [matMenuTriggerFor] = "menu">
-        <mat-icon  >more_vert</mat-icon>
+        <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu = "matMenu">
         <button mat-menu-item>

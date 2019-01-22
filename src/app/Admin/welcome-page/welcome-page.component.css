@@ -85,3 +85,40 @@ li
   color: white;
   background-image: linear-gradient(brown,black);
 }
+
+.positionforlabel
+{
+    float: right;
+    padding-left: 40%;
+}
+
+mat-tab
+{
+    padding-left: 10px;
+}
+
+.fill-space {
+    /* This fills the remaining space, by using flexbox.
+    Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .adminname
+  {
+    position: absolute;
+    right: 45px;
+  }
+
+  .menuicon
+  {
+    right: 15px;
+    position: absolute;
+    color: rgb(189,189,189);
+  }
+
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: none;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: none;
+}

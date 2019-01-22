@@ -10,6 +10,14 @@ import { RegisterRoomComponent } from './Admin/register-room/register-room.compo
 import { UserDetailsComponent } from './Admin/user-details/user-details.component';
 import { WelcomePageComponent } from './Admin/welcome-page/welcome-page.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UserModuleComponent } from './User/user-module/user-module.component';
+import { RegisterComponent } from './register/register.component';
+import { BookRoomComponent } from './User/book-room/book-room.component';
+import { LoginComponent } from './user-login/login.component';
+import { UserHomeComponent } from './User/home/home.component';
+import { MainHomeComponent } from './main-home/main-home.component';
+import { MainAboutComponent } from './main-about/main-about.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 // import { REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 
@@ -20,17 +28,34 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     RegisterRoomComponent,
     UserDetailsComponent,
     WelcomePageComponent,
+    UserModuleComponent,
+    RegisterComponent,
+    UserHomeComponent,
+    BookRoomComponent,
+    LoginComponent,
+    MainHomeComponent,
+    MainAboutComponent,
+    AdminLoginComponent,
   ],
   imports: [
     BrowserModule,
     DemoMaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path:'' , component: WelcomePageComponent },
-      { path:'welcome' , component: WelcomePageComponent },      
+      { path:'' , component: MainAboutComponent },
+      { path:'welcome' , component: WelcomePageComponent },
+      { path:'main-home', component: MainHomeComponent },
+      { path: 'user-register', component:RegisterComponent },      
       { path:'register' , component: RegisterRoomComponent },
+      { path:'main-about', component: MainAboutComponent },
       { path:'userdetails' , component: UserDetailsComponent },
-      { path:'**' , component: AdminHomePageComponent },
+      { path: 'usermodule', component: UserModuleComponent },
+      { path: 'user-homemodule', component: UserHomeComponent },
+      { path: 'user-book-room', component:BookRoomComponent },
+      { path: 'user-login', component: LoginComponent },
+      { path: 'admin-login', component: AdminLoginComponent },
+      { path:'admin-home' , component: AdminHomePageComponent },
+      { path: '**', component: MainAboutComponent }
     ]),
     FormsModule,
     ReactiveFormsModule

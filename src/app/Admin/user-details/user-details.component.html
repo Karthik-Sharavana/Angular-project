@@ -1,3 +1,44 @@
+<div>
+  <mat-toolbar class="example-toolbar " style="background-image: linear-gradient(to right, darkcyan, rgb(0,92,92));padding: 2%;">
+    <label style="color: white; font-size: large">{{pageTitle}}</label>
+      <mat-tab-group style="padding-left: 14%;position: relative;">
+         <mat-tab>
+            <ng-template mat-tab-label>
+               <a class="nav-link" [routerLink] = "['/welcome']" style="text-decoration: none; color: white; font-size: large;">
+                  Guide
+               </a>
+            </ng-template>
+         </mat-tab> 
+         <mat-tab>
+            <ng-template mat-tab-label>
+               <a class="nav-link" [routerLink] = "['/register']" style="text-decoration: none;color: white; font-size: large">
+                  Register Room
+               </a>
+            </ng-template>
+         </mat-tab>
+         <mat-tab>
+            <ng-template mat-tab-label>
+               <a class="nav-link" [routerLink] = "['/userdetails']" style="text-decoration: none; color: white; font-size: large">
+                  View Details
+               </a>
+            </ng-template>
+         </mat-tab>
+      </mat-tab-group>
+
+      <label class="adminname" style="color: rgb(182, 152,152); font-size: small"> {{adminName}} </label>
+      <button class="menuicon" mat-icon-button [matMenuTriggerFor] = "menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu = "matMenu">
+        <button mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span style="font: bold; font-size: large">Signout</span>
+        </button>
+      </mat-menu>   
+   </mat-toolbar>
+   <router-outlet></router-outlet>
+</div>
+
 <mat-icon class="alignment">search</mat-icon>
 
 <mat-form-field>
@@ -10,40 +51,44 @@
   <table mat-table [dataSource]="userdetails">
 
     <ng-container matColumnDef = "empid">
-      <th mat-header-cell *matHeaderCellDef>Employee Id</th>
+      <th mat-header-cell *matHeaderCellDef><strong>Employee Id</strong></th>
       <td mat-cell *matCellDef = "let detail"> {{detail.empid}} </td>
     </ng-container>
 
     <ng-container matColumnDef = "empname">
-      <th mat-header-cell *matHeaderCellDef>Employee Name</th>
+      <th mat-header-cell *matHeaderCellDef><strong>Employee Name</strong></th>
       <td mat-cell *matCellDef = "let detail"> {{detail.empname}} </td>
     </ng-container>
 
     <ng-container matColumnDef = "empemail">
-      <th mat-header-cell *matHeaderCellDef>Employee Email</th>
+      <th mat-header-cell *matHeaderCellDef><strong>Employee Email</strong></th>
       <td mat-cell *matCellDef = "let detail"> {{detail.empemail}} </td>
     </ng-container>
 
     <ng-container matColumnDef = "rnumber">
-      <th mat-header-cell *matHeaderCellDef>Room Number</th>
+      <th mat-header-cell *matHeaderCellDef><strong>Room Number</strong></th>
       <td mat-cell *matCellDef = "let detail"> {{detail.rnumber}} </td>
     </ng-container>
 
     <ng-container matColumnDef = "floor">
-      <th mat-header-cell *matHeaderCellDef>Floor</th>
+      <th mat-header-cell *matHeaderCellDef><strong>Floor</strong></th>
       <td mat-cell *matCellDef = "let detail"> {{detail.floor}} </td>
     </ng-container>
 
     <ng-container matColumnDef = "npersons">
-      <th mat-header-cell *matHeaderCellDef>No of Persons</th>
+      <th mat-header-cell *matHeaderCellDef><strong>No of Persons</strong></th>
       <td mat-cell *matCellDef = "let detail"> {{detail.npersons}} </td>
     </ng-container>
+
+    <!-- <ng-container matColumnDef = "npersons">
+      <th mat-header-cell *matHeaderCellDef><strong>Address</strong></th>
+      <td mat-cell *matCellDef = "let detail"> {{detail.npersons}} </td>
+    </ng-container> -->
 
     <tr mat-header-row *matHeaderRowDef = "displayedColumns; sticky: true"></tr>
     <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
   </table>
-
-  <div class="footer">
-    <mat-paginator fixed [pageSizeOptions] = "[5,10,20]" showFirstLastButtons></mat-paginator>
-  </div>
+</div>
+<div class="footer">
+    <mat-paginator style="font-size: 12pt;" [pageSizeOptions] = "[5,10,20]" showFirstLastButtons></mat-paginator>
 </div>

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminHomePageComponent implements OnInit {
 
   pageTitle = "Meeting Application";
-  adminName = "Happy";
+  adminName = "happy123@meet.com";
 
   constructor() { }
 

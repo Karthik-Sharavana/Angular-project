@@ -8,6 +8,8 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 })
 export class UserDetailsComponent {
 
+  pageTitle = "Meeting Application";
+
   displayedColumns: string[] = ['empid','empname','empemail','rnumber','floor','npersons'];
   userdetails = new MatTableDataSource<InterfaceUserDetails>(USER_DETAILS);
 
